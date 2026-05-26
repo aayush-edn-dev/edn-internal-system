@@ -93,6 +93,13 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "edn_internal_system.users",
+    "edn_internal_system.authentication",
+    "edn_internal_system.billing",
+    "edn_internal_system.dashboard",
+    "edn_internal_system.followup",
+    "edn_internal_system.receipts",
+
+    
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
