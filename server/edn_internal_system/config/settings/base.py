@@ -48,10 +48,14 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db(
-        "DATABASE_URL",
-        default="postgres://localhost/edn_internal_system",
-    ),
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'edn_crm',
+        'USER': 'sijan',          # Your database username
+        'PASSWORD': 'Admin@123', # Your database password
+        'HOST': 'localhost',         # Or '127.0.0.1'
+        'PORT': '3306',              # Default PostgreSQL port
+    }
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
@@ -98,6 +102,7 @@ LOCAL_APPS = [
     "edn_internal_system.dashboard",
     "edn_internal_system.followup",
     "edn_internal_system.receipts",
+    "edn_internal_system.crm",
 
     
     # Your stuff: custom apps go here
